@@ -11,6 +11,13 @@
 		225D6DE11AE0933D0014A92B /* ScrollKeyboardControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225D6DE01AE0933D0014A92B /* ScrollKeyboardControllerTests.m */; };
 		225D6DEC1AE093660014A92B /* SKCKeyboardController.h in Headers */ = {isa = PBXBuildFile; fileRef = 225D6DEA1AE093660014A92B /* SKCKeyboardController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		225D6DED1AE093660014A92B /* SKCKeyboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225D6DEB1AE093660014A92B /* SKCKeyboardController.m */; };
+		225D6DFC1AE0A1F60014A92B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225D6DFB1AE0A1F60014A92B /* main.m */; };
+		225D6DFF1AE0A1F60014A92B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225D6DFE1AE0A1F60014A92B /* AppDelegate.m */; };
+		225D6E051AE0A1F60014A92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225D6E031AE0A1F60014A92B /* Main.storyboard */; };
+		225D6E071AE0A1F60014A92B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225D6E061AE0A1F60014A92B /* Images.xcassets */; };
+		225D6E0A1AE0A1F60014A92B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225D6E081AE0A1F60014A92B /* LaunchScreen.xib */; };
+		225D6E161AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225D6E151AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests.m */; };
+		225D6E1D1AE0A2840014A92B /* ScrollKeyboardController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225D6DCE1AE0933D0014A92B /* ScrollKeyboardController.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +27,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 225D6DCD1AE0933D0014A92B;
 			remoteInfo = ScrollKeyboardController;
+		};
+		225D6E101AE0A1F70014A92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 225D6DC51AE0933D0014A92B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225D6DF61AE0A1F60014A92B;
+			remoteInfo = ScrollKeyboardControllerExample;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -31,6 +45,17 @@
 		225D6DE01AE0933D0014A92B /* ScrollKeyboardControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollKeyboardControllerTests.m; sourceTree = "<group>"; };
 		225D6DEA1AE093660014A92B /* SKCKeyboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKCKeyboardController.h; sourceTree = "<group>"; };
 		225D6DEB1AE093660014A92B /* SKCKeyboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKCKeyboardController.m; sourceTree = "<group>"; };
+		225D6DF71AE0A1F60014A92B /* ScrollKeyboardControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollKeyboardControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		225D6DFA1AE0A1F60014A92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225D6DFB1AE0A1F60014A92B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		225D6DFD1AE0A1F60014A92B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		225D6DFE1AE0A1F60014A92B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		225D6E041AE0A1F60014A92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		225D6E061AE0A1F60014A92B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		225D6E091AE0A1F60014A92B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		225D6E0F1AE0A1F60014A92B /* ScrollKeyboardControllerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollKeyboardControllerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		225D6E141AE0A1F70014A92B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225D6E151AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollKeyboardControllerExampleTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +74,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		225D6DF41AE0A1F60014A92B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225D6E1D1AE0A2840014A92B /* ScrollKeyboardController.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225D6E0C1AE0A1F60014A92B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +97,8 @@
 			children = (
 				225D6DD01AE0933D0014A92B /* ScrollKeyboardController */,
 				225D6DDD1AE0933D0014A92B /* ScrollKeyboardControllerTests */,
+				225D6DF81AE0A1F60014A92B /* ScrollKeyboardControllerExample */,
+				225D6E121AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests */,
 				225D6DCF1AE0933D0014A92B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +108,8 @@
 			children = (
 				225D6DCE1AE0933D0014A92B /* ScrollKeyboardController.framework */,
 				225D6DD91AE0933D0014A92B /* ScrollKeyboardControllerTests.xctest */,
+				225D6DF71AE0A1F60014A92B /* ScrollKeyboardControllerExample.app */,
+				225D6E0F1AE0A1F60014A92B /* ScrollKeyboardControllerExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +145,45 @@
 			isa = PBXGroup;
 			children = (
 				225D6DDF1AE0933D0014A92B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		225D6DF81AE0A1F60014A92B /* ScrollKeyboardControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				225D6DFD1AE0A1F60014A92B /* AppDelegate.h */,
+				225D6DFE1AE0A1F60014A92B /* AppDelegate.m */,
+				225D6E031AE0A1F60014A92B /* Main.storyboard */,
+				225D6E061AE0A1F60014A92B /* Images.xcassets */,
+				225D6E081AE0A1F60014A92B /* LaunchScreen.xib */,
+				225D6DF91AE0A1F60014A92B /* Supporting Files */,
+			);
+			path = ScrollKeyboardControllerExample;
+			sourceTree = "<group>";
+		};
+		225D6DF91AE0A1F60014A92B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				225D6DFA1AE0A1F60014A92B /* Info.plist */,
+				225D6DFB1AE0A1F60014A92B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		225D6E121AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				225D6E151AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests.m */,
+				225D6E131AE0A1F70014A92B /* Supporting Files */,
+			);
+			path = ScrollKeyboardControllerExampleTests;
+			sourceTree = "<group>";
+		};
+		225D6E131AE0A1F70014A92B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				225D6E141AE0A1F70014A92B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +238,41 @@
 			productReference = 225D6DD91AE0933D0014A92B /* ScrollKeyboardControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		225D6DF61AE0A1F60014A92B /* ScrollKeyboardControllerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225D6E1B1AE0A1F70014A92B /* Build configuration list for PBXNativeTarget "ScrollKeyboardControllerExample" */;
+			buildPhases = (
+				225D6DF31AE0A1F60014A92B /* Sources */,
+				225D6DF41AE0A1F60014A92B /* Frameworks */,
+				225D6DF51AE0A1F60014A92B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrollKeyboardControllerExample;
+			productName = ScrollKeyboardControllerExample;
+			productReference = 225D6DF71AE0A1F60014A92B /* ScrollKeyboardControllerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		225D6E0E1AE0A1F60014A92B /* ScrollKeyboardControllerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225D6E1C1AE0A1F70014A92B /* Build configuration list for PBXNativeTarget "ScrollKeyboardControllerExampleTests" */;
+			buildPhases = (
+				225D6E0B1AE0A1F60014A92B /* Sources */,
+				225D6E0C1AE0A1F60014A92B /* Frameworks */,
+				225D6E0D1AE0A1F60014A92B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				225D6E111AE0A1F70014A92B /* PBXTargetDependency */,
+			);
+			name = ScrollKeyboardControllerExampleTests;
+			productName = ScrollKeyboardControllerExampleTests;
+			productReference = 225D6E0F1AE0A1F60014A92B /* ScrollKeyboardControllerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +288,13 @@
 					225D6DD81AE0933D0014A92B = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					225D6DF61AE0A1F60014A92B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					225D6E0E1AE0A1F60014A92B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 225D6DF61AE0A1F60014A92B;
+					};
 				};
 			};
 			buildConfigurationList = 225D6DC81AE0933D0014A92B /* Build configuration list for PBXProject "ScrollKeyboardController" */;
@@ -178,6 +303,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 225D6DC41AE0933D0014A92B;
 			productRefGroup = 225D6DCF1AE0933D0014A92B /* Products */;
@@ -186,6 +312,8 @@
 			targets = (
 				225D6DCD1AE0933D0014A92B /* ScrollKeyboardController */,
 				225D6DD81AE0933D0014A92B /* ScrollKeyboardControllerTests */,
+				225D6DF61AE0A1F60014A92B /* ScrollKeyboardControllerExample */,
+				225D6E0E1AE0A1F60014A92B /* ScrollKeyboardControllerExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +327,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		225D6DD71AE0933D0014A92B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225D6DF51AE0A1F60014A92B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225D6E051AE0A1F60014A92B /* Main.storyboard in Resources */,
+				225D6E0A1AE0A1F60014A92B /* LaunchScreen.xib in Resources */,
+				225D6E071AE0A1F60014A92B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225D6E0D1AE0A1F60014A92B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,6 +369,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		225D6DF31AE0A1F60014A92B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225D6DFF1AE0A1F60014A92B /* AppDelegate.m in Sources */,
+				225D6DFC1AE0A1F60014A92B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225D6E0B1AE0A1F60014A92B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225D6E161AE0A1F70014A92B /* ScrollKeyboardControllerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,7 +394,31 @@
 			target = 225D6DCD1AE0933D0014A92B /* ScrollKeyboardController */;
 			targetProxy = 225D6DDB1AE0933D0014A92B /* PBXContainerItemProxy */;
 		};
+		225D6E111AE0A1F70014A92B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225D6DF61AE0A1F60014A92B /* ScrollKeyboardControllerExample */;
+			targetProxy = 225D6E101AE0A1F70014A92B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		225D6E031AE0A1F60014A92B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225D6E041AE0A1F60014A92B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		225D6E081AE0A1F60014A92B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225D6E091AE0A1F60014A92B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		225D6DE21AE0933D0014A92B /* Debug */ = {
@@ -379,6 +565,64 @@
 			};
 			name = Release;
 		};
+		225D6E171AE0A1F70014A92B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScrollKeyboardControllerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		225D6E181AE0A1F70014A92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ScrollKeyboardControllerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		225D6E191AE0A1F70014A92B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScrollKeyboardControllerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollKeyboardControllerExample.app/ScrollKeyboardControllerExample";
+			};
+			name = Debug;
+		};
+		225D6E1A1AE0A1F70014A92B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ScrollKeyboardControllerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollKeyboardControllerExample.app/ScrollKeyboardControllerExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -398,12 +642,30 @@
 				225D6DE61AE0933D0014A92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		225D6DE71AE0933D0014A92B /* Build configuration list for PBXNativeTarget "ScrollKeyboardControllerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				225D6DE81AE0933D0014A92B /* Debug */,
 				225D6DE91AE0933D0014A92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225D6E1B1AE0A1F70014A92B /* Build configuration list for PBXNativeTarget "ScrollKeyboardControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225D6E171AE0A1F70014A92B /* Debug */,
+				225D6E181AE0A1F70014A92B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		225D6E1C1AE0A1F70014A92B /* Build configuration list for PBXNativeTarget "ScrollKeyboardControllerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225D6E191AE0A1F70014A92B /* Debug */,
+				225D6E1A1AE0A1F70014A92B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
