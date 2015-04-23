@@ -39,7 +39,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKE-Fl-HCY">
                                         <rect key="frame" x="252" y="340" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="firstResponderDidChange:" destination="sGY-Zg-Uv4" eventType="editingDidBegin" id="Kcn-Pc-upH"/>
                                         </connections>

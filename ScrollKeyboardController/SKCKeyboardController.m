@@ -6,20 +6,29 @@
 
 @end
 
-@interface SKCKeyboardControllerState : NSObject
+@interface SKCKeyboardState : NSObject
 
 @property (nonatomic, assign, readonly) UIKeyboardType keyboardType;
+@property (nonatomic, assign, readonly) UITextAutocorrectionType autocorrectionType;
 @property (nonatomic, assign, readonly) CGFloat keyboardHeight;
+
+- (instancetype)initWithKeyboardType:(UIKeyboardType)keyboardType autocorrectType:(UITextAutocorrectionType)autocorrectionType keyboardHeight:(CGFloat)keyboardHeight;
+
+@end
+
+@interface SKCScrollViewState : NSObject
+
 @property (nonatomic, assign, readonly) UIEdgeInsets contentInset;
 @property (nonatomic, assign, readonly) UIEdgeInsets scrollIndicatorInsets;
 
-- (instancetype)initWithKeyboardType:(UIKeyboardType)keyboardType keyboardHeight:(CGFloat)keyboardHeight contentInset:(UIEdgeInsets)contentInset scrollIndicatorInsets:(UIEdgeInsets)scrollIndicatorInsets;
+- (instancetype)initWithContentInset:(UIEdgeInsets)contentInset scrollIndicatorInsets:(UIEdgeInsets)scrollIndicatorInsets;
 
 @end
 
 @interface SKCKeyboardController ()
 
-@property (nonatomic, strong) SKCKeyboardControllerState *originalState;
+@property (nonatomic, strong) SKCKeyboardState *keyboardState;
+@property (nonatomic, strong) SKCScrollViewState *originalScrollViewState;
 @property (nonatomic, assign, readonly, getter = isKeyboardShowing) BOOL keyboardShowing;
 
 @end
@@ -52,14 +61,23 @@
                 UIScrollView *scrollView = _strongSelf.scrollView;
                 UIView *firstResponder = [scrollView findFirstResponder];
                 CGRect convertedKeyboardFrame = [scrollView convertRect:keyboardFrame fromView:nil];
-                CGFloat keyboardHeightDiff = convertedKeyboardFrame.size.height - _strongSelf.originalState.keyboardHeight;
+                CGFloat keyboardHeightDiff = convertedKeyboardFrame.size.height - _strongSelf.keyboardState.keyboardHeight;
                 
-                [_strongSelf setOriginalState:
-                    [[SKCKeyboardControllerState alloc]
+                if (!_strongSelf.originalScrollViewState) {
+                    [_strongSelf setOriginalScrollViewState:
+                        [[SKCScrollViewState alloc]
+                            initWithContentInset:scrollView.contentInset
+                            scrollIndicatorInsets:scrollView.scrollIndicatorInsets
+                        ]
+                    ];
+                }
+                
+                [_strongSelf setKeyboardState:
+                    [[SKCKeyboardState alloc]
                         initWithKeyboardType:[(id<UITextInputTraits>)firstResponder keyboardType]
+                        autocorrectType:[(id<UITextInputTraits>)firstResponder autocorrectionType]
                         keyboardHeight:convertedKeyboardFrame.size.height
-                        contentInset:scrollView.contentInset
-                        scrollIndicatorInsets:scrollView.scrollIndicatorInsets]
+                    ]
                 ];
                 
                 CGPoint scrollViewContentOffset = _strongSelf.scrollView.contentOffset;
@@ -90,16 +108,17 @@
             queue:nil
             usingBlock:^(NSNotification *notification) {
                 SKCKeyboardController *_strongSelf = _weakSelf;
-                SKCKeyboardControllerState *previousState = _strongSelf.originalState;
-                if (previousState) {
-                    [_strongSelf setOriginalState:nil];
+                SKCScrollViewState *previousScrollViewState = _strongSelf.originalScrollViewState;
+                if (previousScrollViewState) {
+                    [_strongSelf setOriginalScrollViewState:nil];
                     
                     UIScrollView *scrollView = _strongSelf.scrollView;
                     [UIView animateWithDuration:[[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue] animations:^{
-                        [scrollView setContentInset:previousState.contentInset];
-                        [scrollView setScrollIndicatorInsets:previousState.scrollIndicatorInsets];
+                        [scrollView setContentInset:previousScrollViewState.contentInset];
+                        [scrollView setScrollIndicatorInsets:previousScrollViewState.scrollIndicatorInsets];
                     }];
                 }
+                [_strongSelf setKeyboardState:nil];
             }
         ];
     }
@@ -120,13 +139,14 @@
 
 - (BOOL)isKeyboardShowing
 {
-    return nil != self.originalState;
+    return nil != self.keyboardState;
 }
 
 - (BOOL)isKeyboardOfSameType:(UIView *)view
 {
     return [view conformsToProtocol:@protocol(UITextInputTraits)]
-        && (self.originalState.keyboardType == [(id<UITextInputTraits>)view keyboardType]);
+        && (self.keyboardState.keyboardType == [(id<UITextInputTraits>)view keyboardType])
+        && (self.keyboardState.autocorrectionType == [(id<UITextInputTraits>)view autocorrectionType]);
 }
 
 - (void)setScrollView:(UIScrollView *)scrollView
@@ -157,7 +177,7 @@
 
 - (CGPoint)contentOffsetToCenterView:(UIView *)view
 {
-    CGFloat scrollViewCenter = floorf(0.5 * (self.scrollView.frame.size.height - self.originalState.keyboardHeight));
+    CGFloat scrollViewCenter = floorf(0.5 * (self.scrollView.frame.size.height - self.keyboardState.keyboardHeight));
     CGFloat textViewCenter = [self.scrollView convertPoint:view.center fromView:view.superview].y;
     return CGPointMake(self.scrollView.contentOffset.x, textViewCenter - scrollViewCenter);
 }
@@ -182,13 +202,25 @@
 
 @end
 
-@implementation SKCKeyboardControllerState
+@implementation SKCKeyboardState
 
-- (instancetype)initWithKeyboardType:(UIKeyboardType)keyboardType keyboardHeight:(CGFloat)keyboardHeight contentInset:(UIEdgeInsets)contentInset scrollIndicatorInsets:(UIEdgeInsets)scrollIndicatorInsets
+- (instancetype)initWithKeyboardType:(UIKeyboardType)keyboardType autocorrectType:(UITextAutocorrectionType)autocorrectionType keyboardHeight:(CGFloat)keyboardHeight
 {
     if (nil != (self = [super init])) {
         _keyboardType = keyboardType;
+        _autocorrectionType = autocorrectionType;
         _keyboardHeight = keyboardHeight;
+    }
+    return self;
+}
+
+@end
+
+@implementation SKCScrollViewState
+
+- (instancetype)initWithContentInset:(UIEdgeInsets)contentInset scrollIndicatorInsets:(UIEdgeInsets)scrollIndicatorInsets
+{
+    if (nil != (self = [super init])) {
         _contentInset = contentInset;
         _scrollIndicatorInsets = scrollIndicatorInsets;
     }
